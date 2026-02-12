@@ -1,0 +1,17 @@
+.main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 100%; 
+}
+
+.noPadding {
+    padding: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 1rem;
+    padding-top: 3.5rem;
+  }
+}
+

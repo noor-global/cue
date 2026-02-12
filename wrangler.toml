@@ -1,0 +1,9 @@
+name = "cue"
+compatibility_date = "2024-02-12"
+pages_build_output_dir = "dist"
+
+[observability]
+enabled = true
+
+[placement]
+mode = "smart"
