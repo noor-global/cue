@@ -1,0 +1,119 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.item {
+  animation: fadeIn 0.3s ease;
+}
+
+.itemHeader {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.itemHeader[data-collapsed="true"] {
+    margin-bottom: 0;
+}
+
+.titleInput {
+  font-weight: 600;
+  flex: 1;
+  min-width: 120px;
+  width: auto;
+}
+
+.contentInput {
+  min-height: 120px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.noMarginBottom { margin-bottom: 0 !important; }
+
+.dragHandle {
+  color: var(--text-tertiary);
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  margin-right: -0.5rem;
+  padding: 0.25rem;
+  border-radius: var(--radius-sm);
+}
+
+.dragHandle:hover {
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+}
+
+.dragHandle:active {
+  cursor: grabbing;
+}
+
+.collapseBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+  border-radius: var(--radius-sm);
+  margin-right: 0.5rem;
+}
+
+.collapseBtn:hover {
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+}
+
+.sortableItem {
+  touch-action: none;
+}
+
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .heading {
+    font-size: 1.25rem;
+  }
+  
+  .itemHeader {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .dragHandle, .collapseBtn {
+    padding: 0.5rem; /* Larger touch target */
+  }
+  
+  .titleInput {
+    font-size: 1rem;
+  }
+}

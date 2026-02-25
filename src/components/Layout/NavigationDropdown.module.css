@@ -1,0 +1,73 @@
+.container {
+  position: fixed;
+  top: 1.25rem;
+  left: 1.25rem;
+  z-index: 1000;
+}
+
+.triggerBtn {
+  display: flex !important;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem !important;
+  background: rgba(15, 15, 16, 0.4) !important;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 999px !important;
+  transition: all var(--transition-base) !important;
+  height: auto !important;
+}
+
+.triggerBtn:hover {
+  background: rgba(15, 15, 16, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  transform: translateY(-1px);
+}
+
+.avatar {
+  width: 24px !important;
+  height: 24px !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.appName {
+  font-family: 'Palmas', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
+}
+
+.chevron {
+  color: var(--text-tertiary);
+  opacity: 0.5;
+}
+
+.triggerBtn:hover .chevron {
+  opacity: 1;
+  color: var(--text-secondary);
+}
+
+.supportLink {
+  opacity: 0.7;
+}
+
+@media (max-width: 640px) {
+  .container {
+    top: 0.75rem;
+    left: 0.75rem;
+  }
+  
+  .appName {
+    display: none; /* Hide app name on small screens to save space */
+  }
+  
+  .triggerBtn {
+    padding: 0.4rem 0.5rem !important;
+    gap: 0.4rem;
+  }
+}
+
+
